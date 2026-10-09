@@ -1,0 +1,125 @@
+/* columns-banner: white promo card that follows the hero (source: .award-banner) */
+.columns-banner {
+  /* source keeps the card 59px from the viewport edge, centred at max 1087px */
+  --columns-banner-edge: 59px;
+  --columns-banner-max: 1087px;
+
+  max-width: var(--columns-banner-max);
+  margin: 10px max(calc(var(--columns-banner-edge) - var(--content-padding)), calc((100% - var(--columns-banner-max)) / 2)) 0;
+  background-color: #fff;
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.columns-banner .columns-banner-row {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* image is hidden on mobile/tablet in the source */
+.columns-banner .columns-banner-img-col {
+  display: none;
+  line-height: 0;
+}
+
+.columns-banner .columns-banner-img-col picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.columns-banner .columns-banner-img-col img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.columns-banner .columns-banner-text-col {
+  padding: 15px 20px;
+}
+
+.columns-banner .columns-banner-text-col > * {
+  margin: 0;
+}
+
+.columns-banner .columns-banner-eyebrow {
+  display: inline-block;
+  margin: 0 0 5px;
+  color: var(--heading-color);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 19.2px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+}
+
+.columns-banner h3 {
+  margin: 0;
+  color: #140f4b;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+}
+
+/* arrowed CTA: blue text + 32px circular arrow */
+.columns-banner .columns-banner-text-col a:any-link {
+  display: inline-block;
+  padding: 0;
+  color: var(--link-color);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 32px;
+  text-decoration: none;
+}
+
+.columns-banner .columns-banner-text-col a:any-link::after {
+  content: '';
+  display: inline-block;
+  position: relative;
+  top: -1px;
+  width: 32px;
+  height: 32px;
+  margin-left: 5px;
+  border-radius: 50%;
+  vertical-align: middle;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 16h11M17 11l5 5-5 5'/%3E%3C/svg%3E") center / 32px no-repeat currentcolor;
+}
+
+/* source hover keeps the blue color, no underline */
+.columns-banner .columns-banner-text-col a:hover,
+.columns-banner .columns-banner-text-col a:focus-visible {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+@media (width >= 425px) {
+  .columns-banner .columns-banner-row {
+    flex-direction: row;
+  }
+
+  .columns-banner .columns-banner-text-col {
+    flex: 1 1 0%;
+    padding: 20px 30px;
+  }
+}
+
+@media (width >= 768px) {
+  .columns-banner .columns-banner-text-col a:any-link {
+    padding: 10px 32px 0 0;
+  }
+}
+
+@media (width > 768px) {
+  .columns-banner {
+    margin-top: 47px;
+    box-shadow: rgb(0 0 0 / 12%) 0 4px 16px 0;
+  }
+
+  .columns-banner .columns-banner-img-col {
+    display: block;
+    flex: 0 0 40%;
+  }
+}

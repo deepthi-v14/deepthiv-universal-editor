@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "url": "https://www.medtronic.com/en-us/index.html",
+  "path": "en-us/index",
+  "timestamp": "2026-10-09T10:06:44.544Z",
+  "title": "Health tech for the digital age | Medtronic",
+  "template": "index",
+  "blocks": [
+    "hero-video",
+    "hero-video",
+    "columns-banner",
+    "carousel-news",
+    "columns-stats",
+    "columns-cta",
+    "cards-impact",
+    "hero-promo",
+    "hero-promo",
+    "cards-icon-link",
+    "cards-icon-link"
+  ]
+}

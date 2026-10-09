@@ -1,0 +1,326 @@
+/* hero-promo: full-bleed promo band (Careers / Investors on the home page).
+ * Default scheme = dark (photo on navy, white text). Option "light" = abstract
+ * light background, navy heading, dark text, blue CTA (see README).
+ * The cards-icon-link tiles that follow in the same section overlap the
+ * bottom-right corner on desktop; that block owns its own positioning.
+ */
+
+/* section that hosts the block: no section padding, scheme colour behind the
+ * following tiles on mobile */
+main > .section.hero-promo-container {
+  position: relative;
+  padding: 0 0 44px;
+  background-color: rgb(0 0 28);
+}
+
+main > .section.hero-promo-container:has(.hero-promo.light) {
+  background-color: rgb(211 211 211 / 50%);
+}
+
+.hero-promo-container .hero-promo-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-promo {
+  /* dark scheme (default) */
+  --hero-promo-bg: rgb(0 0 28);
+  --hero-promo-eyebrow-color: rgb(255 255 255 / 70%);
+  --hero-promo-rule-color: rgb(255 255 255 / 35%);
+  --hero-promo-heading-color: #fff;
+  --hero-promo-text-color: #fff;
+  --hero-promo-cta-color: #fff;
+  --hero-promo-cta-weight: 700;
+  --hero-promo-link-color: #fff;
+  --hero-promo-separator-color: rgb(255 255 255 / 35%);
+  --hero-promo-arrow-bg: var(--brand-blue-light);
+  --hero-promo-content-width: 400px;
+  --hero-promo-links-width: 230px;
+  --hero-promo-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke='white' stroke-width='1.5' stroke-linejoin='round' stroke-miterlimit='10'%3E%3Cpath d='M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98'/%3E%3C/svg%3E");
+
+  position: relative;
+  background-color: var(--hero-promo-bg);
+  color: var(--hero-promo-text-color);
+}
+
+.hero-promo.light {
+  --hero-promo-bg: rgb(211 211 211 / 50%);
+  --hero-promo-eyebrow-color: rgb(0 0 0 / 55%);
+  --hero-promo-rule-color: rgb(0 0 0 / 30%);
+  --hero-promo-heading-color: var(--brand-navy);
+  --hero-promo-text-color: rgb(0 0 0 / 77%);
+  --hero-promo-cta-color: var(--brand-blue);
+  --hero-promo-cta-weight: 500;
+  --hero-promo-link-color: var(--brand-navy);
+  --hero-promo-separator-color: rgb(0 0 0 / 55%);
+  --hero-promo-arrow-bg: var(--brand-blue);
+  --hero-promo-content-width: 514px;
+  --hero-promo-links-width: 260px;
+
+  /* mobile: the background spans the whole section (incl. the tiles) */
+  position: static;
+  background-color: transparent;
+}
+
+/* background image */
+.hero-promo .hero-promo-background {
+  line-height: 0;
+}
+
+.hero-promo .hero-promo-background p {
+  margin: 0;
+}
+
+.hero-promo .hero-promo-background picture,
+.hero-promo .hero-promo-background img {
+  display: block;
+  width: 100%;
+}
+
+.hero-promo .hero-promo-background img {
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.hero-promo.light .hero-promo-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* content */
+.hero-promo .hero-promo-inner {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.hero-promo.light .hero-promo-inner {
+  padding-bottom: 0;
+}
+
+.hero-promo .hero-promo-content > * {
+  margin: 0;
+}
+
+.hero-promo .hero-promo-content .hero-promo-eyebrow {
+  position: relative;
+  padding-bottom: 21px;
+  color: var(--hero-promo-eyebrow-color);
+  font-size: var(--eyebrow-font-size);
+  font-weight: 500;
+  line-height: 19.2px;
+  letter-spacing: var(--eyebrow-letter-spacing);
+  text-transform: uppercase;
+}
+
+.hero-promo .hero-promo-content .hero-promo-eyebrow::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 192px;
+  height: 1px;
+  background-color: var(--hero-promo-rule-color);
+}
+
+.hero-promo .hero-promo-content h2 {
+  margin: 33px 0 15px;
+  color: var(--hero-promo-heading-color);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 30.8px;
+}
+
+.hero-promo .hero-promo-content p {
+  color: var(--hero-promo-text-color);
+  font-size: 16px;
+  line-height: 25.6px;
+}
+
+.hero-promo .hero-promo-content h2 + p {
+  margin-bottom: 16px;
+}
+
+/* light: background fills the section (declared here to keep specificity ascending) */
+.hero-promo.light .hero-promo-background p,
+.hero-promo.light .hero-promo-background picture,
+.hero-promo.light .hero-promo-background img {
+  height: 100%;
+}
+
+/* arrowed links (primary CTA + secondary list) */
+.hero-promo .hero-promo-cta a:any-link,
+.hero-promo .hero-promo-link-list a:any-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.hero-promo .hero-promo-cta a::after,
+.hero-promo .hero-promo-link-list a::after {
+  content: '';
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--hero-promo-arrow) center / 32px no-repeat var(--hero-promo-arrow-bg);
+  transition: transform 0.3s;
+}
+
+.hero-promo .hero-promo-cta a:hover,
+.hero-promo .hero-promo-cta a:focus-visible,
+.hero-promo .hero-promo-link-list a:hover,
+.hero-promo .hero-promo-link-list a:focus-visible {
+  text-decoration: none;
+}
+
+.hero-promo .hero-promo-cta a:hover::after,
+.hero-promo .hero-promo-cta a:focus-visible::after,
+.hero-promo .hero-promo-link-list a:hover::after,
+.hero-promo .hero-promo-link-list a:focus-visible::after {
+  transform: translateX(5px);
+}
+
+.hero-promo .hero-promo-content .hero-promo-cta {
+  padding: 0;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.hero-promo .hero-promo-cta a:any-link,
+.hero-promo .hero-promo-cta a:hover {
+  gap: 5px;
+  color: var(--hero-promo-cta-color);
+  font-weight: var(--hero-promo-cta-weight);
+}
+
+/* secondary links */
+.hero-promo .hero-promo-links {
+  margin: 33px 0;
+}
+
+.hero-promo .hero-promo-link-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-promo .hero-promo-link-list li {
+  box-sizing: border-box;
+  width: 280px;
+  max-width: 100%;
+  padding-right: 10px;
+}
+
+.hero-promo .hero-promo-link-list li + li {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid var(--hero-promo-separator-color);
+}
+
+.hero-promo.light .hero-promo-link-list li {
+  width: 100%;
+}
+
+.hero-promo .hero-promo-link-list a:any-link,
+.hero-promo .hero-promo-link-list a:hover {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  color: var(--hero-promo-link-color);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: right;
+}
+
+@media (width >= 900px) {
+  main > .section.hero-promo-container,
+  main > .section.hero-promo-container:has(.hero-promo.light) {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .hero-promo,
+  .hero-promo.light {
+    position: relative;
+    min-height: 754px;
+    background-color: var(--hero-promo-bg);
+  }
+
+  .hero-promo .hero-promo-background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  /* careers photo is capped at the content width, navy fills the sides */
+  .hero-promo:not(.light) .hero-promo-background {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+  }
+
+  .hero-promo .hero-promo-background p,
+  .hero-promo .hero-promo-background picture,
+  .hero-promo .hero-promo-background img {
+    height: 100%;
+  }
+
+  .hero-promo .hero-promo-inner,
+  .hero-promo.light .hero-promo-inner {
+    min-height: 754px;
+    padding: 0;
+  }
+
+  .hero-promo .hero-promo-content {
+    box-sizing: border-box;
+    max-width: var(--hero-promo-content-width);
+    padding: 69px 0 0 70px;
+  }
+
+  .hero-promo .hero-promo-content h2 {
+    font-size: 52px;
+    line-height: 57.2px;
+  }
+
+  .hero-promo .hero-promo-content p {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .hero-promo .hero-promo-content h2 + p {
+    margin-bottom: 20px;
+  }
+
+  .hero-promo .hero-promo-content .hero-promo-cta {
+    padding: 10px 0 14px;
+  }
+
+  .hero-promo .hero-promo-links {
+    position: absolute;
+    top: 60px;
+    right: 50px;
+    width: var(--hero-promo-links-width);
+    margin: 0;
+  }
+
+  .hero-promo .hero-promo-link-list {
+    align-items: stretch;
+  }
+
+  .hero-promo .hero-promo-link-list li {
+    width: auto;
+  }
+
+  .hero-promo .hero-promo-link-list a:any-link,
+  .hero-promo .hero-promo-link-list a:hover {
+    min-height: 60px;
+  }
+}

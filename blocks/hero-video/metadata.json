@@ -1,0 +1,20 @@
+{
+  "variantName": "hero-video",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light card on video",
+    "density": "spacious",
+    "purpose": "page-hero",
+    "imagePattern": "bg-video+foreground-image",
+    "structure": "eyebrow + heading + paragraph + cta + image"
+  },
+  "contentPattern": "row1: background video link (mp4) / poster; row2: foreground image; row3: eyebrow p, h2, p, CTA link",
+  "usage": {
+    "pagesUsing": ["https://www.medtronic.com/en-us/index.html"],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-09"
+  },
+  "options": [],
+  "memberVariantIds": ["hero-video"]
+}

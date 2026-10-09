@@ -1,0 +1,20 @@
+{
+  "variantName": "carousel-news",
+  "baseBlock": "carousel",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "medium",
+    "purpose": "news-feed",
+    "imagePattern": "tall-image-per-item",
+    "structure": "image + category + linked heading"
+  },
+  "contentPattern": "6 rows: [image | category p, h3 with link]",
+  "usage": {
+    "pagesUsing": ["https://www.medtronic.com/en-us/index.html"],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-09"
+  },
+  "options": [],
+  "memberVariantIds": ["carousel-news"]
+}

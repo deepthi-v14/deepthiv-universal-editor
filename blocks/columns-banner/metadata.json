@@ -1,0 +1,20 @@
+{
+  "variantName": "columns-banner",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "promo-banner-card",
+    "imagePattern": "image-left",
+    "structure": "image + eyebrow + heading + cta"
+  },
+  "contentPattern": "1 row, 2 cells: [image | eyebrow p, h3, CTA link]",
+  "usage": {
+    "pagesUsing": ["https://www.medtronic.com/en-us/index.html"],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-09"
+  },
+  "options": [],
+  "memberVariantIds": ["columns-banner"]
+}

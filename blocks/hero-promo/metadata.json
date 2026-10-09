@@ -1,0 +1,20 @@
+{
+  "variantName": "hero-promo",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "promo-band",
+    "imagePattern": "full-bleed-bg",
+    "structure": "eyebrow + heading + paragraph + cta + link list"
+  },
+  "contentPattern": "row1: background image; row2: eyebrow p, h2, p, CTA link, ul of secondary links",
+  "usage": {
+    "pagesUsing": ["https://www.medtronic.com/en-us/index.html"],
+    "reuseCount": 2,
+    "lastUsed": "2026-10-09"
+  },
+  "options": [],
+  "memberVariantIds": ["hero-promo"]
+}
