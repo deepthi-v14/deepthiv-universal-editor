@@ -1,0 +1,20 @@
+{
+  "variantName": "columns-stats",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "about-stats",
+    "imagePattern": "large-media-right",
+    "structure": "eyebrow + heading + paragraph + cta + media + stats"
+  },
+  "contentPattern": "1 row, 2 cells: [eyebrow p, h2, p, CTA | image (video link optional), stats as list of 'number + label' paragraphs, source link]",
+  "usage": {
+    "pagesUsing": ["https://www.medtronic.com/en-us/index.html"],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-09"
+  },
+  "options": [],
+  "memberVariantIds": ["columns-stats"]
+}

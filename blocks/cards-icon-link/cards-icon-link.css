@@ -1,0 +1,117 @@
+/* cards-icon-link: row of square icon + label link tiles.
+ * Default: translucent light-blue tiles (Careers).
+ * Variant "solid": solid brand-blue tiles (Investors).
+ */
+.cards-icon-link {
+  --cards-icon-link-bg: rgb(74 125 255 / 90%);
+  --cards-icon-link-hover-bg: var(--brand-blue-light);
+
+  position: relative;
+  z-index: 1;
+}
+
+.cards-icon-link.solid {
+  --cards-icon-link-bg: var(--brand-blue);
+}
+
+.cards-icon-link > ul {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cards-icon-link .cards-icon-link-card {
+  display: flex;
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+.cards-icon-link .cards-icon-link-tile,
+.cards-icon-link .cards-icon-link-body {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 107px;
+  min-height: 102px;
+  padding: 0;
+  background-color: var(--cards-icon-link-bg);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 160%;
+  text-align: center;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.3s, background-color 0.3s;
+}
+
+.cards-icon-link .cards-icon-link-body > * {
+  margin: 0;
+}
+
+.cards-icon-link .cards-icon-link-card + .cards-icon-link-card > * {
+  border-left: 1px solid rgb(0 0 0 / 10%);
+}
+
+.cards-icon-link .cards-icon-link-tile:any-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.cards-icon-link .cards-icon-link-tile:hover,
+.cards-icon-link .cards-icon-link-tile:focus-visible {
+  background-color: var(--cards-icon-link-hover-bg);
+  color: #fff;
+  opacity: 1;
+}
+
+.cards-icon-link .cards-icon-link-icon {
+  display: flex;
+  line-height: 0;
+}
+
+.cards-icon-link .cards-icon-link-icon .icon,
+.cards-icon-link .cards-icon-link-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+.cards-icon-link .cards-icon-link-icon img {
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.cards-icon-link .cards-icon-link-tile:hover .cards-icon-link-icon img,
+.cards-icon-link .cards-icon-link-tile:focus-visible .cards-icon-link-icon img {
+  transform: scale(1.1);
+}
+
+@media (width >= 900px) {
+  /* overlay the bottom-right corner of the preceding block in the section:
+   * tile height (96px) + 50px inset from the bottom edge */
+  .cards-icon-link {
+    margin-top: -146px;
+    margin-bottom: 50px;
+  }
+
+  .cards-icon-link > ul {
+    justify-content: flex-end;
+    gap: 2px;
+
+    /* 50px inset from the right edge of the section content box */
+    margin-right: calc(50px - var(--content-padding));
+  }
+
+  .cards-icon-link .cards-icon-link-tile,
+  .cards-icon-link .cards-icon-link-body {
+    width: 207px;
+    min-height: 96px;
+    font-size: 18px;
+  }
+}

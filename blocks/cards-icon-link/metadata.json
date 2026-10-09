@@ -1,0 +1,20 @@
+{
+  "variantName": "cards-icon-link",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "translucent-blue",
+    "density": "compact",
+    "purpose": "quick-links",
+    "imagePattern": "icon",
+    "structure": "icon + link"
+  },
+  "contentPattern": "3 rows: [icon image | link]",
+  "usage": {
+    "pagesUsing": ["https://www.medtronic.com/en-us/index.html"],
+    "reuseCount": 2,
+    "lastUsed": "2026-10-09"
+  },
+  "options": [],
+  "memberVariantIds": ["cards-icon-link"]
+}

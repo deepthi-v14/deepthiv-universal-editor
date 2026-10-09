@@ -1,0 +1,51 @@
+/* Medtronic brand tokens, extracted from https://www.medtronic.com/en-us/index.html */
+:root {
+  /* fonts: AvenirNextWorld is licensed; add its woff2 files to /fonts and fonts.css to self-host */
+  --heading-font-family: avenirnextworld, "Avenir Next", avenir, avenirnextworld-fallback, helvetica, arial, sans-serif;
+  --body-font-family: avenirnextworld, "Avenir Next", avenir, avenirnextworld-fallback, helvetica, arial, sans-serif;
+
+  /* colors */
+  --background-color: #f5f5f5;
+  --surface-color: #fff;
+  --text-color: rgb(0 0 0 / 90%);
+  --heading-color: #170f5f;
+  --brand-navy: #170f5f;
+  --brand-blue: #1010eb;
+  --brand-blue-light: #4a7dff;
+  --brand-tint: #e6f1ff;
+  --link-color: #1010eb;
+  --link-hover-color: #170f5f;
+  --light-color: #f5f5f5;
+  --dark-color: #1e1e1e;
+  --black-color: #000;
+
+  /* spacing */
+  --section-padding: 48px;
+  --content-max-width: 1440px;
+  --content-padding: 24px;
+  --nav-height: 115px;
+
+  /* eyebrow */
+  --eyebrow-font-size: 12px;
+  --eyebrow-letter-spacing: 1.286px;
+}
+
+@media (width >= 600px) {
+  :root {
+    --nav-height: 64px;
+  }
+}
+
+@media (width >= 900px) {
+  :root {
+    --section-padding: 80px;
+    --content-padding: 66px;
+  }
+}
+
+/* the source switches to the two-row desktop header at 1024px */
+@media (width >= 1024px) {
+  :root {
+    --nav-height: 135px;
+  }
+}

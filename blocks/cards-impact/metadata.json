@@ -1,0 +1,20 @@
+{
+  "variantName": "cards-impact",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light+blue+navy tiles",
+    "density": "medium",
+    "purpose": "impact-bento",
+    "imagePattern": "icons+one-photo",
+    "structure": "feature tile + 3 stat tiles + story tile"
+  },
+  "contentPattern": "5 rows: [ (empty) | eyebrow, h2, p, CTA ], 3x [icon | number p, label p (+ link)], [image | eyebrow, h3, p, CTA]",
+  "usage": {
+    "pagesUsing": ["https://www.medtronic.com/en-us/index.html"],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-09"
+  },
+  "options": [],
+  "memberVariantIds": ["cards-impact"]
+}

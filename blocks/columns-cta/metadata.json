@@ -1,0 +1,20 @@
+{
+  "variantName": "columns-cta",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "compact",
+    "purpose": "story-cta-band",
+    "imagePattern": "noimg",
+    "structure": "eyebrow + heading + paragraph + cta"
+  },
+  "contentPattern": "1 row, 2 cells: [eyebrow p, h3, p | CTA link]",
+  "usage": {
+    "pagesUsing": ["https://www.medtronic.com/en-us/index.html"],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-09"
+  },
+  "options": [],
+  "memberVariantIds": ["columns-cta"]
+}

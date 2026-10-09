@@ -110,6 +110,20 @@ export function decorateButtons(main) {
 }
 
 /**
+ * Marks short label paragraphs placed directly above a heading as eyebrows.
+ * @param {HTMLElement} main The main container element
+ */
+export function decorateEyebrows(main) {
+  main.querySelectorAll('.default-content-wrapper > p + :is(h1, h2, h3)').forEach((heading) => {
+    const p = heading.previousElementSibling;
+    const text = p.textContent.trim();
+    if (text && text.length <= 40 && !p.querySelector('a, img, picture')) {
+      p.classList.add('eyebrow');
+    }
+  });
+}
+
+/**
  * Decorates the main element.
  * @param {Element} main The main element
  */
@@ -120,6 +134,7 @@ export function decorateMain(main) {
   decorateSections(main);
   decorateBlocks(main);
   decorateButtons(main);
+  decorateEyebrows(main);
 }
 
 /**

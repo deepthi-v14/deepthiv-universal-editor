@@ -1,0 +1,167 @@
+{
+  "metadata": {
+    "projectType": "xwalk"
+  },
+  "templates": [
+    {
+      "name": "index",
+      "urls": [
+        "https://www.medtronic.com/en-us/index.html"
+      ],
+      "representativeUrl": "https://www.medtronic.com/en-us/index.html",
+      "description": "Medtronic US homepage: video hero, impact banner, news carousel, who-we-are stats, CTA banner, impact bento, careers and investors promos",
+      "urlPattern": "/en-us/*",
+      "blocks": [
+        {
+          "name": "hero-video",
+          "instances": [
+            "#Header-video",
+            "section.hero-jon"
+          ]
+        },
+        {
+          "name": "columns-banner",
+          "instances": [
+            "#hero-banner-patients .award-banner",
+            ".award-banner"
+          ]
+        },
+        {
+          "name": "carousel-news",
+          "instances": [
+            "#News-Media .scroller",
+            ".news-media-sectionTarget-wrapper > .scroller"
+          ]
+        },
+        {
+          "name": "columns-stats",
+          "instances": [
+            "#who-we-are .who-we-are-section",
+            ".who-we-are-section"
+          ]
+        },
+        {
+          "name": "columns-cta",
+          "instances": [
+            ".wrapper-cta-banner .cta-banner",
+            ".cta-banner"
+          ]
+        },
+        {
+          "name": "cards-impact",
+          "instances": [
+            "#Our-Impact .wrapper-parent > .parent",
+            "#Our-Impact .parent"
+          ]
+        },
+        {
+          "name": "hero-promo",
+          "instances": [
+            ".wrapper-careers-section",
+            ".wrapper-investors-section"
+          ]
+        },
+        {
+          "name": "cards-icon-link",
+          "instances": [
+            ".careers-section .careers-jobs",
+            ".investors-section .investors-icons"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero + Impact Report banner",
+          "selector": [
+            ".hero-main-content"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-video",
+            "columns-banner"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "The latest - news carousel",
+          "selector": [
+            "#News-Media"
+          ],
+          "style": null,
+          "blocks": [
+            "carousel-news"
+          ],
+          "defaultContent": [
+            "#News-Media .news-media-sectionTarget .eyebrow",
+            "#News-Media .news-media-sectionTarget h2.headline"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "Who we are - stats",
+          "selector": [
+            "#who-we-are"
+          ],
+          "style": "dark",
+          "blocks": [
+            "columns-stats"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-4",
+          "name": "CTA story banner",
+          "selector": [
+            ".wrapper-cta-banner"
+          ],
+          "style": "black",
+          "blocks": [
+            "columns-cta"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-5",
+          "name": "Our impact bento",
+          "selector": [
+            "#Our-Impact"
+          ],
+          "style": "grey",
+          "blocks": [
+            "cards-impact"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-6",
+          "name": "Careers",
+          "selector": [
+            "#Careers",
+            ".wrapper-careers-section"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-promo",
+            "cards-icon-link"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-7",
+          "name": "Investors",
+          "selector": [
+            ".wrapper-investors-section"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-promo",
+            "cards-icon-link"
+          ],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}

@@ -50,7 +50,15 @@
         "hero",
         "cards",
         "columns",
-        "fragment"
+        "fragment",
+        "hero-video",
+        "columns-banner",
+        "carousel-news",
+        "columns-stats",
+        "columns-cta",
+        "cards-impact",
+        "hero-promo",
+        "cards-icon-link"
       ]
     }
   ]

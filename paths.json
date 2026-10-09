@@ -1,0 +1,8 @@
+{
+  "mappings": [
+    "/content/medtronic-demo/:/"
+  ],
+  "includes": [
+    "/content/medtronic-demo/"
+  ]
+}
