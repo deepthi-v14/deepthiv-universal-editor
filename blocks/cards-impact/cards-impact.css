@@ -184,7 +184,7 @@
 /* story tile */
 .cards-impact .cards-impact-story {
   grid-column: 1 / -1;
-  background-color: #9794b6;
+  background-color: var(--brand-navy);
 }
 
 .cards-impact .cards-impact-story .cards-impact-card-image {
@@ -200,20 +200,15 @@
 .cards-impact .cards-impact-story .cards-impact-card-body {
   flex: 1 1 auto;
   padding: 0 22px 30px 30px;
-  color: var(--brand-navy);
+  color: #fff;
 }
 
 .cards-impact .cards-impact-story .cards-impact-eyebrow {
   margin: 21px 0 20px;
-  color: var(--brand-navy);
-}
-
-.cards-impact .cards-impact-story .cards-impact-eyebrow::after {
-  background-color: rgb(23 15 95 / 35%);
 }
 
 .cards-impact .cards-impact-story :is(h1, h2, h3, h4, h5, h6) {
-  color: var(--brand-navy);
+  color: #fff;
   font-size: 32px;
   font-weight: 700;
   line-height: 41.6px;
@@ -229,11 +224,7 @@
 }
 
 .cards-impact .cards-impact-story .cards-impact-cta a:any-link {
-  color: var(--brand-navy);
-}
-
-.cards-impact .cards-impact-story .cards-impact-cta a:any-link::after {
-  background-color: var(--brand-blue);
+  color: var(--brand-blue-light);
 }
 
 @media (width >= 900px) {
